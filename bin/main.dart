@@ -30,10 +30,46 @@ void main() {
         // TODO: Aprendiz 2 - Implementar lógica para listar
         break;
       case '3':
-        // TODO: Aprendiz 3 - Implementar lógica para buscar
+        stdout.write('Ingrese el nombre del contacto a buscar: ');
+        String? nombreBuscar = stdin.readLineSync();
+
+        bool founded = false;
+
+        for (var contacto in schedule) {
+          if (contacto.name.toLowerCase() ==
+              nombreBuscar!.toLowerCase()) {
+            print('\nContacto encontrado:');
+            print('Nombre: ${contacto.name}');
+            print('Teléfono: ${contacto.phone}');
+            founded = true;
+            break;
+          }
+        }
+
+        if (!founded) {
+          print('No se encontró un contacto con ese nombre.');
+        }
         break;
+
       case '4':
-        // TODO: Aprendiz 3 - Implementar lógica para eliminar
+        stdout.write('Ingrese el nombre del contacto a eliminar: ');
+        String? nombreEliminar = stdin.readLineSync();
+
+        bool eliminado = false;
+
+        for (int i = 0; i < schedule.length; i++) {
+          if (schedule[i].name.toLowerCase() ==
+              nombreEliminar!.toLowerCase()) {
+            schedule.removeAt(i);
+            print('Contacto eliminado correctamente.');
+            eliminado = true;
+            break;
+          }
+        }
+
+        if (!eliminado) {
+          print('No se encontró un contacto con ese nombre.');
+        }
         break;
       case '5':
         print('Saliendo de la agenda...');
