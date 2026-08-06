@@ -11,7 +11,7 @@ A continuación, se detalla el equipo de aprendices involucrados en el desarroll
 
 | Nombre del Aprendiz | Rol en Gitflow | Tareas Asignadas (Dart) |
 | :--- | :--- | :--- |
-| **FELIPE ECHEVERRI DAVID** | **Líder de Repositorio** (Ramas `main`, `develop`, `release`) | Estructura inicial, menú base, opción de **Agregar** contacto. Gestión de integración. |
+| **FELIPE ECHEVERRI DAVID** | **Líder de Repositorio** (Ramas `main`, `develop`, `release`) | Estructura inicial, menú base, opción de **Agregar** contacto. Gestión de integración. | 
 | **MARIANA LOPEZ PALENICA** | **Desarrollador Feature** (Rama `feature/listar`) | Creación del modelo `Contacto` y lógica de la opción de **Listar** contactos. |
 | **VICENTE RIOS VARGAS** | **Desarrollador Feature** (Rama `feature/gestion`) | Implementación de los algoritmos para **Buscar** y **Eliminar** contactos en la lista. |
 
