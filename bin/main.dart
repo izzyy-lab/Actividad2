@@ -43,8 +43,20 @@ void main() {
           }
         }
         break;
-      case '2':
-        // TODO: Aprendiz 2 - Implementar lógica para listar
+            case '2':
+              // TODO: Aprendiz 2 - Implementar lógica para listar
+        if (schedule.isEmpty) {
+        print('No hay contactos registrados.');
+      } else {
+        print('\n--- Lista de Contactos ---');
+
+        for (var contacto in schedule) {
+          print('Nombre: ${contacto.name}');
+          print('Teléfono: ${contacto.phone}');
+          print('-------------------------');
+        }
+      }
+      
         break;
       case '3':
         stdout.write('Ingrese el nombre del contacto a buscar: ');
