@@ -24,10 +24,39 @@ void main() {
 
     switch (opcion) {
       case '1':
-        // TODO: Aprendiz 1 - Implementar lógica para agregar
+        stdout.write('Ingrese el nombre del contacto: ');
+        String? nombre = stdin.readLineSync();
+
+        stdout.write('Ingrese el teléfono del contacto: ');
+        String? telefono = stdin.readLineSync();
+
+        if (nombre == null || nombre.trim().isEmpty || telefono == null || telefono.trim().isEmpty) {
+          print('Nombre o teléfono inválido. No se agregó el contacto.');
+        } else {
+          // Evitar duplicados por nombre (case-insensitive)
+          bool existe = schedule.any((c) => c.name.toLowerCase() == nombre!.toLowerCase());
+          if (existe) {
+            print('Ya existe un contacto con ese nombre.');
+          } else {
+            schedule.add(Contact(nombre.trim(), telefono.trim()));
+            print('Contacto agregado correctamente.');
+          }
+        }
         break;
-      case '2':
-        // TODO: Aprendiz 2 - Implementar lógica para listar
+            case '2':
+              // TODO: Aprendiz 2 - Implementar lógica para listar
+        if (schedule.isEmpty) {
+        print('No hay contactos registrados.');
+      } else {
+        print('\n--- Lista de Contactos ---');
+
+        for (var contacto in schedule) {
+          print('Nombre: ${contacto.name}');
+          print('Teléfono: ${contacto.phone}');
+          print('-------------------------');
+        }
+      }
+      
         break;
       case '3':
         stdout.write('Ingrese el nombre del contacto a buscar: ');
