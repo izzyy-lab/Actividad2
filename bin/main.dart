@@ -44,7 +44,6 @@ void main() {
         }
         break;
             case '2':
-              // TODO: Aprendiz 2 - Implementar lógica para listar
         if (schedule.isEmpty) {
         print('No hay contactos registrados.');
       } else {
